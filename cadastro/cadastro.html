@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="estilo_cad.css">
+</head>
+<body>
+    <main>
+        
+            <h1>Cadastro</h1>
+            <form class="formulario">
+                <label for="nome" >Nome:</label><br>
+                <input 
+                type="text" 
+                id="nome" 
+                name="nome"><br>
+        
+                <label for="email">E-mail:</label><br>
+                <input 
+                type="email" 
+                id="email" 
+                name="email"><br>
+        
+                <label for="senha">Senha:</label><br>
+                <input 
+                type="password" 
+                id="senha" 
+                name="senha"><br>
+        
+                <label for="confirma_senha">Confirmar senha:</label><br>
+                <input type="password" id="confirma_senha" name="confirma_senha"><br>
+        
+                <input type="submit" value="Cadastrar">
+            </form>
+        </body>
+        </html>
+    </main>
+    <section class="imagem">
+        <img src="imagens/login.png"  alt="figura_de_cadastro">
+    </section>
+        
+          
+    
+
+    <script>
+function validarFormulario() {
+    // Obtém os valores dos campos do formulário
+    var nome = document.querySelector("nome").value;
+    var email = document.querySelector("email").value;
+    var senha = document.querySelector("senha").value;
+    var confirmaSenha = document.gquerySelector("confirma_senha").value;
+
+    // Verifica se o campo do nome está vazio
+    if (nome == " ") {
+        window.alert("Por favor, digite seu nome.");
+        return false;
+    }
+
+    // Verifica se o campo do email está vazio e se é um email válido
+    if (email == "") {
+        alert("Por favor, digite seu email.");
+        return false;
+    } else if (!validarEmail(email)) {
+        alert("Por favor, digite um email válido.");
+        return false;
+    }
+
+    // Verifica se o campo da senha está vazio
+    if (senha == "") {
+        alert("Por favor, digite uma senha.");
+        return false;
+    }
+
+    // Verifica se a confirmação da senha é igual à senha
+    if (senha != confirmaSenha) {
+        alert("As senhas não coincidem.");
+        return false;
+    }
+
+    return true;
+}
+
+// Função para validar o formato do email
+function validarEmail(email) {
+    var padraoEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return padraoEmail.test(email);
+}
+
+
+    </script>
+</body>
+</html>

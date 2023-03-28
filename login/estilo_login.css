@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+    
+
+}
+
+main {
+    background-color: rgb(32, 219, 157);
+    width: 50%;
+    height: 100vh;
+}
+
+h1{
+    position: absolute;
+    top: -70px;
+    font-size: 50px;
+}
+.formulario{
+    position: absolute;
+    top: 30vh;
+    left: 40vh;
+    font-size: 30px;
+    }
+
+    input{
+        width: 300px;
+        height: 25px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    input[type="submit"] {
+        background-color: #23ff2a;
+        color: #020202;
+        border: none;
+        padding: 05px ;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #3e8e41;
+        color: white;
+    }
+    
+
+    a {
+        padding-top: 15px;
+        font-size: 25px;
+    }
+
+    .imagem{
+        position: absolute;
+        left: 50%;
+        top: 50px;
+    }
